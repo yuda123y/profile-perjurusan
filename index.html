@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK Vokasi Unggulan - Kemitraan Industri & Pendidikan Terdepan</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts & Embedded Custom CSS (Self-Contained Single File) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      --primary-blue: #2563eb;
+      --primary-blue-dark: #1d4ed8;
+      --primary-blue-deep: #1e3a8a;
+      --accent-orange: #f97316;
+      --accent-orange-hover: #ea580c;
+      --accent-amber: #f59e0b;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
+      background-color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 9px;
+      height: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+      border: 2px solid #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Glassmorphism Navigation */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+    }
+
+    /* Card Hover Elevation */
+    .card-hover {
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -12px rgba(37, 99, 235, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-hover-alt:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -12px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Badges & Gradient Highlights */
+    .gradient-hero-badge {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(59, 130, 246, 0.14) 100%);
+      border: 1px solid rgba(37, 99, 235, 0.22);
+    }
+
+    .gradient-orange-badge {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+    }
+
+    .cta-gradient-navy {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #172554 100%);
+    }
+
+    .cta-gradient-blue {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+    }
+
+    /* Active Nav Links */
+    .nav-link.active-nav {
+      color: #2563eb !important;
+      font-weight: 700;
+      position: relative;
+    }
+    .nav-link.active-nav::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 3px;
+      background-color: #2563eb;
+      border-radius: 9999px;
+    }
+
+    /* Accordion Transitions */
+    .faq-icon {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Modal Animations */
+    .modal-backdrop {
+      animation: fadeIn 0.2s ease-out forwards;
+    }
+    .modal-card {
+      animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .antialiased {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            amber: {
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- MAIN NAVIGATION BAR (FIGMA HEADER)                                        -->
+  <!-- ========================================================================= -->
+  <header class="glass-nav sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#beranda" class="flex items-center space-x-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-xl font-extrabold tracking-tight text-slate-900">SMK BISA</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-600 border border-amber-500/20">HEBAT</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">Vokasi Unggulan & Industri Global</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Unified Single Page Anchors) -->
+        <nav class="hidden lg:flex items-center space-x-1">
+          <a href="#beranda" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
+            Beranda
+          </a>
+          <a href="#katalog" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
+            Katalog Jurusan
+          </a>
+          <a href="#rpl" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
+            Jurusan RPL
+          </a>
+          <a href="#tefa" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
+            Teaching Factory
+          </a>
+          <a href="#galeri" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
+            Galeri Karya
+          </a>
+          <a href="#kemitraan" class="nav-link px-3.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-blue-600 transition">
+            Kemitraan DUDI
+          </a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <button data-modal-target="modal-portal" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-blue-600 hover:bg-blue-50 transition border border-blue-200">
+            Portal Siswa
+          </button>
+          <button data-modal-target="modal-ppdb" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 transition shadow-md shadow-amber-600/20 flex items-center space-x-2">
+            <span>Pendaftaran PPDB</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Buka Menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav-menu" class="hidden lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="#beranda" class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">Beranda</a>
+      <a href="#katalog" class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">Katalog Jurusan</a>
+      <a href="#rpl" class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">Jurusan RPL</a>
+      <a href="#tefa" class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">Teaching Factory</a>
+      <a href="#galeri" class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">Galeri Karya Siswa</a>
+      <a href="#kemitraan" class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">Kemitraan DUDI</a>
+      <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+        <button data-modal-target="modal-portal" class="w-full py-2.5 text-center text-sm font-semibold text-blue-600 bg-blue-50 rounded-xl">Portal Siswa</button>
+        <button data-modal-target="modal-ppdb" class="w-full py-2.5 text-center text-sm font-semibold text-white bg-amber-600 rounded-xl shadow-md">Pendaftaran PPDB 2026/2027</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================= -->
+    <!-- SECTION 1: BERANDA & KEMITRAAN DUDI STRATEGIS (FIGMA FRAME 1)           -->
+    <!-- ======================================================================= -->
+    <section id="beranda" class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Text & Actions -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+          <div class="lg:col-span-8 space-y-5">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full gradient-hero-badge text-blue-700 text-xs font-semibold">
+              <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+              <span>Kemitraan Strategis Dunia Usaha & Dunia Industri (DUDI)</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+              Membangun Jembatan Nyata antara Bangku Sekolah dan Industri Global
+            </h1>
+          </div>
+          <div class="lg:col-span-4 lg:pt-8 text-slate-600 text-base leading-relaxed space-y-4">
+            <p>
+              Program kemitraan terpadu SMK dengan korporasi teknologi, manufaktur, dan perbankan dunia untuk mencetak talenta vokasi unggul siap kerja dengan lisensi kompetensi internasional.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <button data-modal-target="modal-kemitraan" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/20 transition">
+                Ajukan Kemitraan DUDI
+              </button>
+              <a href="#katalog" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 transition">
+                Eksplorasi Jurusan &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Key Stat Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-2xl mb-4">
+              50+
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Mitra Industri Aktif</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Perusahaan multinasional & BUMN terkemuka dalam konsorsium kurikulum vokasi terpadu.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-2xl mb-4">
+              94.2%
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Keterserapan Kerja</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Lulusan langsung terserap di industri mitra atau berwirausaha mandiri maksimal 3 bulan.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-2xl mb-4">
+              Rp 4.5 Jt+
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Rata-rata Gaji Awal</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Standar penghasilan awal fresh graduate bersertifikasi BNSP level 2 dan vendor global.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-2xl mb-4">
+              6 Bulan
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Magang Industri</h3>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Prakerin penuh di lini produksi industri dengan sistem mentor profesional satu lawan satu.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 2: KATALOG JURUSAN UNGGULAN (FIGMA FRAME 4)                     -->
+    <!-- ======================================================================= -->
+    <section id="katalog" class="py-20 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Hero Header Katalog with Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+              Katalog Jurusan 2026/2027
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Wujudkan Keahlian Masa Depanmu Bersama Jurusan Unggulan SMK
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Kurikulum selaras industri, guru praktisi bersertifikat, fasilitas laboratorium mutakhir, dan sertifikasi BNSP resmi siap mengantarmu menjadi talenta profesional yang diperebutkan dunia kerja.
+            </p>
+            
+            <!-- Real-time Search Input -->
+            <div class="pt-2 max-w-md">
+              <div class="relative">
+                <input type="text" id="katalog-search" placeholder="Cari nama jurusan, skill, atau kata kunci..." class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <svg class="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <button class="katalog-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-600 text-white shadow-sm transition" data-category="all">Semua Bidang</button>
+              <button class="katalog-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="teknologi">Teknologi Informasi</button>
+              <button class="katalog-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="otomotif">Teknik Otomotif</button>
+              <button class="katalog-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="bisnis">Bisnis Manajemen</button>
+              <button class="katalog-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="kreatif">Seni Kreatif & Kuliner</button>
+            </div>
+          </div>
+
+          <!-- Hero Image with Badge -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Siswa SMK di Lab Teaching Factory" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/30 to-transparent flex items-end p-6">
+                <div>
+                  <span class="inline-block px-2.5 py-1 rounded bg-amber-500 text-white text-[11px] font-bold uppercase tracking-wider mb-2">Teaching Factory Terakreditasi Industri</span>
+                  <p class="text-white text-base font-bold">Laboratorium Standar Industri dengan Sertifikasi Resmi</p>
+                  <p class="text-slate-300 text-xs mt-1">Peralatan mutakhir dari mitra korporasi global</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Title: Eksplorasi Katalog Jurusan Masa Depan -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Eksplorasi Katalog Jurusan Masa Depan</h3>
+          <p class="text-slate-600 text-sm mt-2">Pilih jalur keahlian yang sesuai dengan passion dan prospek karir impianmu</p>
+        </div>
+
+        <!-- 6 Jurusan Cards Grid -->
+        <div id="jurusan-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 1: Rekayasa Perangkat Lunak (RPL) -->
+          <div class="jurusan-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="teknologi">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Rekayasa Perangkat Lunak" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white shadow">Teknologi & Komunikasi</span>
+              <span class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">Akreditasi A</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-slate-900">Rekayasa Perangkat Lunak (RPL)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Penguasaan full-stack web, mobile app development, cloud architecture, dan clean code berstandar internasional.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 font-medium">12 Mitra Startup</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">AWS & Oracle</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Gaji Rp 5 - 9 Jt</span>
+                </div>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                <a href="#rpl" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center space-x-1">
+                  <span>Lihat Detail Jurusan</span>
+                  <span>&rarr;</span>
+                </a>
+                <button data-modal-target="modal-ppdb" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-blue-600 hover:text-white transition text-slate-700">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Desain Komunikasi Visual (DKV) -->
+          <div class="jurusan-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="kreatif">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Desain Komunikasi Visual" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow">Seni & Industri Kreatif</span>
+              <span class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">Akreditasi A</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-slate-900">Desain Komunikasi Visual (DKV)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Desain grafis digital, animasi 2D/3D, UI/UX design, videografi sinematik, dan branding agensi komersial.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-purple-50 text-purple-700 font-medium">8 Agensi Kreatif</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Adobe Certified</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Gaji Rp 4.5 - 8 Jt</span>
+                </div>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                <button data-modal-target="modal-konsultasi" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center space-x-1">
+                  <span>Konsultasi Jurusan</span>
+                  <span>&rarr;</span>
+                </button>
+                <button data-modal-target="modal-ppdb" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-blue-600 hover:text-white transition text-slate-700">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Teknik Kendaraan Ringan (TKR) -->
+          <div class="jurusan-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="otomotif">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Teknik Kendaraan Ringan" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-amber-600 text-white shadow">Teknik Otomotif</span>
+              <span class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">Akreditasi A</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-slate-900">Teknik Kendaraan Ringan (TKR)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Pemeliharaan mesin modern, sistem Electronic Fuel Injection (EFI), diagnosis kelistrikan, dan mobil listrik (EV).
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-700 font-medium">Astra & Toyota</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">BNSP Otomotif</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Gaji Rp 4.5 - 7.5 Jt</span>
+                </div>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                <button data-modal-target="modal-konsultasi" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center space-x-1">
+                  <span>Konsultasi Jurusan</span>
+                  <span>&rarr;</span>
+                </button>
+                <button data-modal-target="modal-ppdb" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-blue-600 hover:text-white transition text-slate-700">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Teknik Jaringan Komputer & Telekomunikasi (TJKT) -->
+          <div class="jurusan-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="teknologi">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Teknik Jaringan Komputer" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white shadow">Teknologi & Komunikasi</span>
+              <span class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">Akreditasi A</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-slate-900">Teknik Komputer & Jaringan (TJKT)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Arsitektur jaringan enterprise, cyber security fundamental, server Linux & Windows, serta fiber optic infrastructure.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 font-medium">Cisco & Mikrotik</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">MTCNA & CCNA</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Gaji Rp 4.8 - 8 Jt</span>
+                </div>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                <button data-modal-target="modal-konsultasi" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center space-x-1">
+                  <span>Konsultasi Jurusan</span>
+                  <span>&rarr;</span>
+                </button>
+                <button data-modal-target="modal-ppdb" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-blue-600 hover:text-white transition text-slate-700">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Akuntansi & Keuangan Lembaga (AKL) -->
+          <div class="jurusan-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="bisnis">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Akuntansi & Keuangan" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-teal-600 text-white shadow">Bisnis & Manajemen</span>
+              <span class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">Akreditasi A</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-slate-900">Akuntansi & Keuangan (AKL)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Laporan keuangan berbasis software Accurate & SAP, perpajakan digital, perbankan syariah, dan audit dasar.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-teal-50 text-teal-700 font-medium">Bank Mandiri & BCA</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Accurate Certified</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Gaji Rp 4.2 - 7 Jt</span>
+                </div>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                <button data-modal-target="modal-konsultasi" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center space-x-1">
+                  <span>Konsultasi Jurusan</span>
+                  <span>&rarr;</span>
+                </button>
+                <button data-modal-target="modal-ppdb" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-blue-600 hover:text-white transition text-slate-700">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Tata Boga / Kuliner -->
+          <div class="jurusan-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="kreatif">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Kuliner & Tata Boga" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-rose-600 text-white shadow">Pariwisata & Hospitality</span>
+              <span class="absolute top-4 right-4 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">Akreditasi A</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-slate-900">Kuliner & Tata Boga</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Seni kuliner kontinental, oriental, pastry bakery modern, manajemen kitchen hotel berbintang, dan food safety HACCP.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-rose-50 text-rose-700 font-medium">Hotel Marriott & Aston</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">HACCP & BNSP</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 font-medium">Gaji Rp 4.5 - 7.5 Jt</span>
+                </div>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                <button data-modal-target="modal-konsultasi" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center space-x-1">
+                  <span>Konsultasi Jurusan</span>
+                  <span>&rarr;</span>
+                </button>
+                <button data-modal-target="modal-ppdb" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-blue-600 hover:text-white transition text-slate-700">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Banner Konsultasi Minat & Bakat (Figma Bottom Frame 4) -->
+        <div class="mt-16 rounded-3xl cta-gradient-navy text-white p-8 sm:p-12 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 max-w-2xl text-center lg:text-left">
+            <span class="px-3 py-1 rounded-full bg-blue-500/30 text-blue-200 text-xs font-semibold border border-blue-400/20">
+              Layanan Bimbingan Karir & Psikotes
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Bingung Memilih Jurusan yang Tepat? Konsultasi Minat & Bakat Sekarang!
+            </h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed">
+              Tim guru BK dan praktisi industri kami siap membantumu memetakan potensi diri, bakat alami, dan prospek karir masa depan secara komprehensif tanpa dipungut biaya.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
+            <button data-modal-target="modal-konsultasi" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/30 transition flex items-center space-x-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2.05 22l5.06-1.32A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm.05 16.5c-1.57 0-3.04-.44-4.3-1.2l-.31-.19-3.18.83.85-3.1-.2-.33A7.94 7.94 0 014.05 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8.5-8 8.5z"/></svg>
+              <span>Konsultasi via WhatsApp</span>
+            </button>
+            <button data-modal-target="modal-ppdb" class="px-5 py-3.5 rounded-xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition">
+              Unduh Brosur (PDF)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 3: SPOTLIGHT JURUSAN UNGGULAN: RPL (FIGMA FRAME 3)             -->
+    <!-- ======================================================================= -->
+    <section id="rpl" class="py-20 bg-slate-50 border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb & Top RPL Badge -->
+        <div class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-6">
+          <a href="#beranda" class="hover:text-blue-600">Beranda</a>
+          <span>/</span>
+          <a href="#katalog" class="hover:text-blue-600">Katalog Jurusan</a>
+          <span>/</span>
+          <span class="text-blue-600">Rekayasa Perangkat Lunak (RPL)</span>
+        </div>
+
+        <!-- RPL Hero Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+          <div class="lg:col-span-8 space-y-5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+                Vokasi Unggulan
+              </span>
+              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                Akreditasi A Unggul
+              </span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Rekayasa Perangkat Lunak
+            </h2>
+
+            <p class="text-slate-600 text-base leading-relaxed">
+              Mempersiapkan software engineer handal dengan penguasaan full-stack web, mobile development, cloud architecture, dan database modern berstandar industri silicon valley dan unicorn Asia.
+            </p>
+
+            <!-- RPL Key Metrics -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="bg-white p-4 rounded-xl border border-slate-200">
+                <div class="text-2xl font-black text-blue-600">98%</div>
+                <div class="text-xs font-semibold text-slate-700 mt-0.5">Keterserapan Kerja</div>
+                <div class="text-[11px] text-slate-500">Startup & Software House</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200">
+                <div class="text-2xl font-black text-amber-600">12+</div>
+                <div class="text-xs font-semibold text-slate-700 mt-0.5">Mitra Startup</div>
+                <div class="text-[11px] text-slate-500">Jakarta, Bandung & Jogja</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200">
+                <div class="text-2xl font-black text-indigo-600">AWS / Oracle</div>
+                <div class="text-xs font-semibold text-slate-700 mt-0.5">Sertifikasi Global</div>
+                <div class="text-[11px] text-slate-500">Vendor Terakreditasi</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <button data-modal-target="modal-ppdb" class="px-6 py-3 rounded-xl font-bold text-sm bg-amber-600 hover:bg-amber-700 text-white shadow-md shadow-amber-600/20 transition">
+                Daftar Jurusan RPL
+              </button>
+              <button data-modal-target="modal-konsultasi" class="px-5 py-3 rounded-xl font-semibold text-sm bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 transition">
+                Unduh Kurikulum (PDF)
+              </button>
+            </div>
+          </div>
+
+          <!-- RPL Sidebar Info Box -->
+          <div class="lg:col-span-4">
+            <div class="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-sm space-y-5">
+              <h4 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Informasi Jurusan RPL</h4>
+              
+              <div class="space-y-3.5 text-xs sm:text-sm">
+                <div class="flex justify-between items-center py-1 border-b border-slate-50">
+                  <span class="text-slate-500">Akreditasi</span>
+                  <span class="font-bold text-emerald-600">A (Unggul 96 Poin)</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-50">
+                  <span class="text-slate-500">Durasi Belajar</span>
+                  <span class="font-bold text-slate-800">3 Tahun (6 Semester)</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-50">
+                  <span class="text-slate-500">Kuota Siswa</span>
+                  <span class="font-bold text-slate-800">72 Siswa (2 Rombel)</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-50">
+                  <span class="text-slate-500">Tech Stack Utama</span>
+                  <span class="font-bold text-slate-800">JS/TS, Dart, Python, PHP</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-50">
+                  <span class="text-slate-500">Fasilitas Lab</span>
+                  <span class="font-bold text-slate-800">Lab iMac & High-End PC</span>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <span class="text-slate-500">Sertifikasi</span>
+                  <span class="font-bold text-blue-600">BNSP, AWS, Dicoding</span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-800">
+                <span class="font-bold block mb-1">Fast-Track Hiring!</span>
+                Siswa dengan nilai capstone project A langsung disalurkan ke software house mitra di semester akhir.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Pilar Kurikulum Pendidikan RPL (6 Cards) -->
+        <div class="mb-16">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Pilar Kurikulum Pendidikan RPL</h3>
+            <p class="text-slate-600 text-sm mt-1">Dirancang bersama praktisi Senior Tech Lead unicorn Indonesia</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-4">
+                01
+              </div>
+              <h4 class="text-lg font-bold text-slate-900">Full-Stack Web Development</h4>
+              <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Pembuatan web modern reaktif menggunakan Next.js, React, Tailwind CSS, Node.js, dan REST/GraphQL API.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+              <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold mb-4">
+                02
+              </div>
+              <h4 class="text-lg font-bold text-slate-900">Mobile Application Engineering</h4>
+              <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Pengembangan aplikasi multiplatform Android & iOS menggunakan framework Flutter dan Firebase backend.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+              <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold mb-4">
+                03
+              </div>
+              <h4 class="text-lg font-bold text-slate-900">Cloud & DevOps Fundamentals</h4>
+              <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Deployment otomatis dengan Docker, GitHub Actions CI/CD, dan cloud server Amazon Web Services (AWS).
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+              <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold mb-4">
+                04
+              </div>
+              <h4 class="text-lg font-bold text-slate-900">UI/UX & Product Design</h4>
+              <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Riset pengguna, pembuatan wireframe, prototyping di Figma, serta penerapan design system yang ramah aksesibilitas.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold mb-4">
+                05
+              </div>
+              <h4 class="text-lg font-bold text-slate-900">Database Architecture & SQL</h4>
+              <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Manajemen data relational dengan PostgreSQL/MySQL dan NoSQL document database dengan MongoDB.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover">
+              <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold mb-4">
+                06
+              </div>
+              <h4 class="text-lg font-bold text-slate-900">Software Quality & Clean Code</h4>
+              <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Penerapan unit testing, automated QA, git branching strategy, dan metodologi Agile Scrum dalam tim pengembang.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Siapa Saja Guru Pengajar & Mentor Industri? -->
+        <div class="mb-16">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Siapa Saja Guru Pengajar & Mentor Industri?</h3>
+            <p class="text-slate-600 text-sm mt-1">Belajar langsung dari praktisi yang berkecimpung di industri teknologi</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center card-hover">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Guru Mentor RPL" class="w-20 h-20 rounded-full mx-auto object-cover mb-4 ring-4 ring-blue-50">
+              <h4 class="font-bold text-slate-900 text-base">Hendra Gunawan, S.Kom., M.T.</h4>
+              <p class="text-xs text-blue-600 font-semibold mt-0.5">Kaprodi RPL • Ex-Senior Engineer Tech Unicorn</p>
+              <p class="text-xs text-slate-500 mt-2">12+ tahun pengalaman arsitektur web berskala tinggi & microservices.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center card-hover">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Guru Mentor UI/UX" class="w-20 h-20 rounded-full mx-auto object-cover mb-4 ring-4 ring-purple-50">
+              <h4 class="font-bold text-slate-900 text-base">Sarah Annisa, S.T.</h4>
+              <p class="text-xs text-purple-600 font-semibold mt-0.5">Lead UI/UX Mentor • Product Designer FinTech</p>
+              <p class="text-xs text-slate-500 mt-2">Spesialis Design Thinking, Design Sprint, & Design System di aplikasi perbankan digital.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center card-hover">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Guru Mentor Cloud" class="w-20 h-20 rounded-full mx-auto object-cover mb-4 ring-4 ring-indigo-50">
+              <h4 class="font-bold text-slate-900 text-base">Ahmad Fauzi, M.Cs.</h4>
+              <p class="text-xs text-indigo-600 font-semibold mt-0.5">Cloud Specialist • AWS Certified Instructor</p>
+              <p class="text-xs text-slate-500 mt-2">Membimbing siswa dalam sertifikasi AWS Academy dan otomasi DevOps CI/CD.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Karya Nyata Siswa RPL yang Diproduksi & Dipakai Industri -->
+        <div class="mb-16">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Karya Nyata Siswa yang Diproduksi & Dipakai Industri</h3>
+            <p class="text-slate-600 text-sm mt-1">Proyek akhir siswa RPL yang telah diimplementasikan secara komersial</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm card-hover">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Aplikasi Kasir UMKM" class="w-full h-44 object-cover">
+              <div class="p-5">
+                <span class="text-[11px] font-bold text-blue-600 uppercase">Aplikasi Web & Mobile</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">POS Kasir UMKM "Warungku"</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Diadopsi oleh 140+ pedagang binaan dinas koperasi untuk pencatatan transaksi kasir dan QRIS otomatis.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm card-hover">
+              <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Smart Greenhouse" class="w-full h-44 object-cover">
+              <div class="p-5">
+                <span class="text-[11px] font-bold text-emerald-600 uppercase">IoT & Cloud System</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">Smart Greenhouse Controller</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Sistem monitoring suhu dan penyiraman nutrisi otomatis hidroponik berbasis sensor ESP32 dan dashboard cloud.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm card-hover">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Mobile Apps Desa" class="w-full h-44 object-cover">
+              <div class="p-5">
+                <span class="text-[11px] font-bold text-purple-600 uppercase">Mobile App Flutter</span>
+                <h4 class="text-base font-bold text-slate-900 mt-1">Portal Desa & Bansos Digital</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  Aplikasi pelayanan administrasi surat pengantar desa dan transparansi distribusi bantuan sosial berbasis NIK.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Pertanyaan Seputar Jurusan RPL (FAQ Accordion) -->
+        <div class="max-w-3xl mx-auto faq-container mb-12">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-extrabold text-slate-900">Pertanyaan Seputar Jurusan RPL</h3>
+            <p class="text-slate-600 text-xs sm:text-sm mt-1">Hal-hal yang sering ditanyakan oleh calon siswa dan orang tua</p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+              <button class="faq-header w-full px-5 py-4 text-left font-bold text-sm text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>Apakah harus sudah bisa coding sebelum masuk jurusan RPL?</span>
+                <svg class="faq-icon w-4 h-4 text-slate-400 shrink-0 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Tidak wajib. Kurikulum RPL kami dirancang dari level dasar (algoritma fundamental, logika pemrograman, dan struktur data) dengan bimbingan intensif dari guru dan asisten lab, sehingga siswa pemula sekalipun dapat menguasai materi dengan baik.
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+              <button class="faq-header w-full px-5 py-4 text-left font-bold text-sm text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>Apakah siswa wajib membawa laptop berspesifikasi tinggi sendiri?</span>
+                <svg class="faq-icon w-4 h-4 text-slate-400 shrink-0 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Sekolah telah menyediakan 4 laboratorium komputer canggih berstandar industri dengan spesifikasi Core i7 / Ryzen 7 dan Mac Lab yang dapat diakses penuh saat KBM maupun di luar jam sekolah untuk pengerjaan proyek.
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+              <button class="faq-header w-full px-5 py-4 text-left font-bold text-sm text-slate-800 flex justify-between items-center hover:bg-slate-50 transition">
+                <span>Bagaimana proses penyaluran magang dan kerja untuk siswa RPL?</span>
+                <svg class="faq-icon w-4 h-4 text-slate-400 shrink-0 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Di kelas XI, siswa menjalani magang 6 bulan di software house atau korporasi mitra DUDI kami. Di kelas XII, portofolio capstone project diuji langsung oleh penguji industri, dan bursa kerja khusus (BKK) menyalurkan siswa ke rekrutmen kerja langsung.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Box RPL (Figma Bottom Frame 3) -->
+        <div class="rounded-3xl cta-gradient-navy text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Kuota Terbatas 72 Kursi</span>
+            <h3 class="text-2xl font-extrabold mt-1">Tertarik Bergabung dengan Jurusan RPL?</h3>
+            <p class="text-blue-100 text-xs sm:text-sm mt-1">Daftarkan dirimu pada Jalur Prestasi & Reguler PPDB 2026/2027 sekarang juga.</p>
+          </div>
+          <button data-modal-target="modal-ppdb" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/30 transition shrink-0">
+            Daftar Jurusan RPL Sekarang
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 4: TEACHING FACTORY (TEFA) & PETA JALUR KARIR                   -->
+    <!-- ======================================================================= -->
+    <section id="tefa" class="py-20 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- TeFa Ecosystem Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+            Standardisasi Industri
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            Ekosistem Belajar Teaching Factory (TeFa)
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+            Membawa atmosfer dan standar mutu pengerjaan industri nyata langsung ke dalam lingkungan pembelajaran sekolah harian siswa.
+          </p>
+        </div>
+
+        <!-- 4 TeFa Pillar Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">Ruang Kelas Standar Industri</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Peralatan mesin, workstation, dan SOP kerja identik dengan yang digunakan pada lini operasional korporasi mitra DUDI.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">Proyek Berbasis Riil (PBL)</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Siswa mengerjakan pesanan produk dan software komersial nyata dari klien pihak ketiga bergaransi mutu profesional.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">Pengajar Praktisi Industri</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Program guru tamu rutin dan co-teaching mingguan bersama engineer, chef, dan desainer profesional aktif.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900">Penyaluran Kerja Terintegrasi</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Bursa Kerja Khusus (BKK) berizin resmi menyelenggarakan direct campus hiring khusus lulusan sebelum wisuda.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section: Peta Jalur Karir: Dari Ruang Kelas Hingga Kontrak Kerja Profesional (Figma Frame 1) -->
+        <div class="border-t border-slate-100 pt-16">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Peta Jalur Karir: Dari Ruang Kelas Hingga Kontrak Kerja Profesional
+            </h3>
+            <p class="text-slate-600 text-sm mt-2">
+              Alur terstruktur 3 tahun memastikan setiap siswa memiliki portofolio dan sertifikasi berbobot tinggi
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative card-hover">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center mb-4">
+                1
+              </div>
+              <span class="text-[11px] font-bold text-blue-600 uppercase">Tahun Ke-1</span>
+              <h4 class="text-base font-bold text-slate-900 mt-1">Pondasi & Sertifikasi Dasar</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Penguasaan dasar keahlian, pembentukan budaya kerja industri (5R/5S), dan sertifikasi kompetensi dasar BNSP level 2.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative card-hover">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center mb-4">
+                2
+              </div>
+              <span class="text-[11px] font-bold text-blue-600 uppercase">Tahun Ke-2</span>
+              <h4 class="text-base font-bold text-slate-900 mt-1">Prakerin & Project Riil</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Magang industri intensif selama 6 bulan di perusahaan rekanan DUDI serta eksekusi pesanan Teaching Factory.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative card-hover">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center mb-4">
+                3
+              </div>
+              <span class="text-[11px] font-bold text-blue-600 uppercase">Tahun Ke-3</span>
+              <h4 class="text-base font-bold text-slate-900 mt-1">Inkubasi Portofolio & Pitching</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Pengerjaan tugas akhir capstone project berbasis kebutuhan industri dan sesi demo day di hadapan pimpinan HRD.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative card-hover">
+              <div class="w-8 h-8 rounded-full bg-amber-600 text-white font-extrabold text-xs flex items-center justify-center mb-4">
+                4
+              </div>
+              <span class="text-[11px] font-bold text-amber-600 uppercase">Kelulusan</span>
+              <h4 class="text-base font-bold text-slate-900 mt-1">Penempatan Karir Terverifikasi</h4>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Uji kompetensi asesor independen, penandatanganan kontrak kerja pra-kelulusan, atau inkubasi rintisan usaha.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 5: GALERI KARYA & PRODUK INOVASI SISWA (FIGMA FRAME 2)         -->
+    <!-- ======================================================================= -->
+    <section id="galeri" class="py-20 bg-slate-50 border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Galeri Karya with Stats on Right (Figma Frame 2) -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div class="space-y-3 max-w-2xl">
+            <span class="px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+              Portofolio Inovasi Siswa
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Galeri Karya & Produk Inovasi Siswa SMK
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Eksplorasi portofolio project nyata berbasis Teaching Factory (TeFa) yang diproduksi dan dimanfaatkan langsung oleh masyarakat dan industri rekanan.
+            </p>
+          </div>
+
+          <!-- Stats Badges on Top Right (Figma Frame 2) -->
+          <div class="flex flex-wrap gap-4 shrink-0">
+            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 shadow-sm text-center">
+              <span class="block text-xl font-black text-blue-600">150+</span>
+              <span class="text-[11px] font-semibold text-slate-500">Karya Siswa Terdaftar</span>
+            </div>
+            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 shadow-sm text-center">
+              <span class="block text-xl font-black text-amber-600">22</span>
+              <span class="text-[11px] font-semibold text-slate-500">Paten & Hak Cipta</span>
+            </div>
+            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 shadow-sm text-center">
+              <span class="block text-xl font-black text-emerald-600">Rp 850 Jt+</span>
+              <span class="text-[11px] font-semibold text-slate-500">Omset TeFa Siswa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Category Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2.5 mb-10 pb-2 border-b border-slate-200/60">
+          <button class="galeri-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white shadow-md transition" data-category="all">
+            Semua Karya
+          </button>
+          <button class="galeri-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="software">
+            Rekayasa Perangkat Lunak & IoT
+          </button>
+          <button class="galeri-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="otomotif">
+            Otomotif & Manufaktur
+          </button>
+          <button class="galeri-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="desain">
+            Desain & Multimedia
+          </button>
+          <button class="galeri-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-category="kuliner">
+            Kuliner & Agribisnis
+          </button>
+        </div>
+
+        <!-- 6 Gallery Project Cards (From Figma Frame 2) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1: Aplikasi POS Toko UMKM Flutter -->
+          <div class="gallery-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="software">
+            <div class="relative h-52 overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=600&q=80" alt="Aplikasi POS Kasir UMKM" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white shadow">Software & IoT</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur">Tim RPL 2024</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900">Aplikasi POS Toko UMKM Berbasis Flutter</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Sistem kasir cerdas multi-toko terintegrasi QRIS dinamis, manajemen inventori real-time, dan pembukuan laba-rugi otomatis.
+                </p>
+                <div class="mt-4 p-3 bg-blue-50/70 rounded-xl text-xs text-blue-900 border border-blue-100">
+                  <span class="font-bold">Mitra Pengguna:</span> 140+ Pedagang Binaan Dinas Koperasi
+                </div>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Tech: Flutter, Go, PostgreSQL</span>
+                <button data-modal-target="modal-konsultasi" class="font-bold text-blue-600 hover:underline">Lihat Detail &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Mesin Sangrai Biji Kopi IoT -->
+          <div class="gallery-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="otomotif">
+            <div class="relative h-52 overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Mesin Sangrai Biji Kopi IoT" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-amber-600 text-white shadow">Otomotif & Mesin</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur">Tim TKR & Mekatronika</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900">Mesin Sangrai Biji Kopi Otomatis IoT</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Mesin roasting kopi kapasitas 5 kg dengan kurva suhu digital presisi yang dipantau real-time melalui smartphone Android.
+                </p>
+                <div class="mt-4 p-3 bg-amber-50/70 rounded-xl text-xs text-amber-900 border border-amber-100">
+                  <span class="font-bold">Mitra Pengguna:</span> 5 Kedai Kopi Spesialti & Koperasi Petani
+                </div>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Tech: ESP32, PID Controller, Metal CNC</span>
+                <button data-modal-target="modal-konsultasi" class="font-bold text-blue-600 hover:underline">Lihat Detail &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Minuman Herbal Organik BPOM -->
+          <div class="gallery-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="kuliner">
+            <div class="relative h-52 overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Formulasi Minuman Herbal" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow">Kuliner & Agribisnis</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur">Tim Tata Boga</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900">Formulasi Minuman Herbal Organik Berstandar BPOM</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Ekstrak rimpang jahe merah dan kunyit asam higienis kemasan tetra-pack yang telah mengantongi sertifikat Halal MUI & izin edar BPOM.
+                </p>
+                <div class="mt-4 p-3 bg-emerald-50/70 rounded-xl text-xs text-emerald-900 border border-emerald-100">
+                  <span class="font-bold">Pencapaian:</span> Izin Edar Resmi & Penjualan Ritel Regional
+                </div>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Standar: HACCP, Halal, Uji Lab BPOM</span>
+                <button data-modal-target="modal-konsultasi" class="font-bold text-blue-600 hover:underline">Lihat Detail &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Animasi Pendek 3D "Jejak Rimba" -->
+          <div class="gallery-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="desain">
+            <div class="relative h-52 overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" alt="Animasi 3D Jejak Rimba" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow">Desain & Multimedia</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur">Tim DKV 2024</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900">Animasi Pendek 3D "Jejak Rimba" (Unreal Engine)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Karya film animasi 3 dimensi tentang pelestarian satwa langka Indonesia dengan teknik rendering real-time Unreal Engine 5.
+                </p>
+                <div class="mt-4 p-3 bg-purple-50/70 rounded-xl text-xs text-purple-900 border border-purple-100">
+                  <span class="font-bold">Prestasi:</span> Juara 1 Festival Seni Siswa Nasional (FLS2N)
+                </div>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Tools: Blender, Unreal Engine 5, Premiere</span>
+                <button data-modal-target="modal-konsultasi" class="font-bold text-blue-600 hover:underline">Lihat Detail &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: UI/UX Super App Ramah Disabilitas -->
+          <div class="gallery-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="desain">
+            <div class="relative h-52 overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" alt="Desain UI/UX Super App" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow">Software & Desain</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur">Kolaborasi RPL & DKV</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900">Desain UI/UX Super App Transportasi Ramah Disabilitas</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Riset antarmuka pengguna komprehensif berstandar WCAG AAA dengan fitur text-to-speech responsif dan navigasi suara.
+                </p>
+                <div class="mt-4 p-3 bg-blue-50/70 rounded-xl text-xs text-blue-900 border border-blue-100">
+                  <span class="font-bold">Penghargaan:</span> Best Human-Centered Design Award 2024
+                </div>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Tools: Figma, Maze Usability, Design System</span>
+                <button data-modal-target="modal-konsultasi" class="font-bold text-blue-600 hover:underline">Lihat Detail &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Sparepart CNC Otomotif -->
+          <div class="gallery-card-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm card-hover flex flex-col" data-category="otomotif">
+            <div class="relative h-52 overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Sparepart Presisi Mesin CNC" class="w-full h-full object-cover">
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-amber-600 text-white shadow">Otomotif & Manufaktur</span>
+              <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur">Tim Teknik Pemesinan</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900">Sparepart Presisi Mesin CNC untuk Komponen Otomotif</h4>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Fabrikasi bracket aluminium dan bushing mesin dengan toleransi mikro menggunakan mesin CNC Milling 4-axis modern.
+                </p>
+                <div class="mt-4 p-3 bg-amber-50/70 rounded-xl text-xs text-amber-900 border border-amber-100">
+                  <span class="font-bold">Mitra Pengguna:</span> Vendor Tier-2 Komponen Otomotif Nasional
+                </div>
+              </div>
+              <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Spesifikasi: JIS Standard, Toleransi 0.01mm</span>
+                <button data-modal-target="modal-konsultasi" class="font-bold text-blue-600 hover:underline">Lihat Detail &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Box Galeri (Figma Frame 2) -->
+        <div class="mt-16 rounded-3xl bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 text-white p-8 sm:p-12 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 max-w-2xl text-center lg:text-left">
+            <span class="px-3 py-1 rounded-full bg-white/20 text-blue-100 text-xs font-semibold">
+              Kemitraan Teaching Factory & Rekrutmen
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Tertarik Merekrut atau Berkolaborasi dengan Tim Siswa Ini?
+            </h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed">
+              Kami membuka peluang pengerjaan proyek pesanan industri, custom software, manufaktur presisi, hingga direct recruitment talenta vokasi berprestasi.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
+            <button data-modal-target="modal-kemitraan" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/30 transition">
+              Hubungi Tim TeFa Kami
+            </button>
+            <button data-modal-target="modal-konsultasi" class="px-5 py-3.5 rounded-xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition">
+              Lihat Portofolio Lengkap
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 6: KEMITRAAN DUDI MULTISEKTOR (FIGMA FRAME 1)                  -->
+    <!-- ======================================================================= -->
+    <section id="kemitraan" class="py-20 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Section Mitra DUDI -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="px-3.5 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
+            Jaringan Industri Terakreditasi
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            Mitra DUDI Multisektor Kelas Nasional & Global
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+            Sinergi berkelanjutan bersama korporasi terdepan dalam penyusunan kurikulum, magang industri, dan rekrutmen kerja terjamin.
+          </p>
+        </div>
+
+        <!-- Sector Filter Pills -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+          <button class="mitra-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white shadow-sm transition" data-sector="all">
+            Semua Sektor
+          </button>
+          <button class="mitra-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-sector="tech">
+            Teknologi Informasi
+          </button>
+          <button class="mitra-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-sector="otomotif">
+            Manufaktur & Otomotif
+          </button>
+          <button class="mitra-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-slate-300 transition" data-sector="finance">
+            Keuangan & Perbankan
+          </button>
+        </div>
+
+        <!-- Partner Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="tech">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-black text-xl mb-4">
+                TEL
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT Telkom Indonesia</h4>
+              <p class="text-xs text-slate-500 mt-1">Telekomunikasi & Cloud Computing</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Magang Cloud & Prakerin Fiber Optic
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="otomotif">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-black text-xl mb-4">
+                AST
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT Astra International Tbk</h4>
+              <p class="text-xs text-slate-500 mt-1">Manufaktur & Layanan Otomotif</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Kelas Khusus Astra & Penyaluran Teknisi
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="finance">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-xl mb-4">
+                MND
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT Bank Mandiri (Persero)</h4>
+              <p class="text-xs text-slate-500 mt-1">Perbankan & Digital Banking</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Magang Keuangan & IT Support
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="tech">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-xl mb-4">
+                GTO
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">GoTo / Tokopedia</h4>
+              <p class="text-xs text-slate-500 mt-1">E-Commerce & Logistik Digital</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Mentorship Praktisi & Rekrutmen Junior Dev
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="otomotif">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-black text-xl mb-4">
+                KOM
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT Komatsu Indonesia</h4>
+              <p class="text-xs text-slate-500 mt-1">Manufaktur Alat Berat & Presisi</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Pelatihan Mesin CNC & Sertifikasi Pengelasan
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="finance">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center font-black text-xl mb-4">
+                BCA
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT Bank Central Asia Tbk</h4>
+              <p class="text-xs text-slate-500 mt-1">Lembaga Keuangan Swasta Terbesar</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Program Beasiswa Bakti & Magang Akuntansi
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="otomotif">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-800 flex items-center justify-center font-black text-xl mb-4">
+                UT
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT United Tractors Tbk</h4>
+              <p class="text-xs text-slate-500 mt-1">Distributor Alat Berat & Energi</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Kelas Khusus Mekanik & Penempatan Nasional
+            </div>
+          </div>
+
+          <div class="mitra-card-item bg-slate-50 p-6 rounded-2xl border border-slate-200 card-hover flex flex-col justify-between" data-sector="otomotif">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center font-black text-xl mb-4">
+                PDI
+              </div>
+              <h4 class="font-bold text-slate-900 text-base">PT Dirgantara Indonesia</h4>
+              <p class="text-xs text-slate-500 mt-1">Industri Dirgantara & Aviasi</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] text-blue-700 font-semibold">
+              Prakerin Manufaktur Pesawat & Komposit
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Section: Kisah Sukses Alumni di Garis Depan Industri (Figma Frame 1) -->
+        <div class="border-t border-slate-100 pt-16">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Kisah Sukses Alumni di Garis Depan Industri
+            </h3>
+            <p class="text-slate-600 text-sm mt-2">
+              Bukti nyata dedikasi dan kualitas lulusan kami yang kini berkarir di berbagai perusahaan impian
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-3 mb-4">
+                  <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" alt="Alumni RPL" class="w-12 h-12 rounded-full object-cover ring-2 ring-blue-100">
+                  <div>
+                    <h5 class="font-bold text-slate-900 text-sm">Rizky Pratama</h5>
+                    <p class="text-[11px] text-blue-600 font-semibold">Alumni RPL 2023</p>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                  "Berkat kurikulum modern dan sertifikasi AWS yang saya raih saat sekolah, saya langsung diterima sebagai Cloud Engineer di Telkom Sigma sebelum wisuda."
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400 font-medium">
+                Cloud Engineer @ Telkom Sigma
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-3 mb-4">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Alumni DKV" class="w-12 h-12 rounded-full object-cover ring-2 ring-purple-100">
+                  <div>
+                    <h5 class="font-bold text-slate-900 text-sm">Nabila Putri</h5>
+                    <p class="text-[11px] text-purple-600 font-semibold">Alumni DKV 2022</p>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                  "Portofolio project TeFa yang saya buat di DKV menjadi kunci lolos interview sebagai UI/UX Designer di salah satu unicorn fintech terbesar Indonesia."
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400 font-medium">
+                UI/UX Designer @ Tech Unicorn
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-3 mb-4">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Alumni TKR" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-100">
+                  <div>
+                    <h5 class="font-bold text-slate-900 text-sm">Dimas Setiawan</h5>
+                    <p class="text-[11px] text-amber-600 font-semibold">Alumni TKR 2023</p>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                  "Magang 6 bulan di bengkel resmi Astra memberi saya jam terbang nyata dengan sistem EFI & mobil hybrid, hingga kini diangkat menjadi Teknisi Senior."
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400 font-medium">
+                Technical Specialist @ PT Astra Honda
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-3 mb-4">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Alumni TJKT" class="w-12 h-12 rounded-full object-cover ring-2 ring-indigo-100">
+                  <div>
+                    <h5 class="font-bold text-slate-900 text-sm">Farhan Hidayat</h5>
+                    <p class="text-[11px] text-indigo-600 font-semibold">Alumni TJKT 2021</p>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed italic">
+                  "Sertifikasi Mikrotik MTCNA dan Cisco CCNA yang dibiayai sekolah sangat dihargai oleh industri jaringan saat proses rekrutmen kerja."
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-400 font-medium">
+                Network Engineer @ Lintasarta
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CTA Lowongan PKL & Rekrutmen DUDI (Figma Frame 1 Bottom) -->
+        <div class="mt-16 rounded-3xl cta-gradient-navy text-white p-8 sm:p-12 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 max-w-2xl text-center lg:text-left">
+            <span class="px-3 py-1 rounded-full bg-blue-500/30 text-blue-200 text-xs font-semibold border border-blue-400/20">
+              Bursa Kerja Khusus & Kemitraan DUDI
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Ingin Membuka Lowongan PKL atau Merekrut Lulusan Siap Kerja Kami?
+            </h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed">
+              Bergabung bersama 50+ korporasi mitra dan dapatkan akses talenta muda terampil dengan sertifikasi kompetensi resmi berstandar nasional dan global.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
+            <button data-modal-target="modal-kemitraan" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/30 transition">
+              Ajukan Kerjasama Industri
+            </button>
+            <button data-modal-target="modal-portal" class="px-5 py-3.5 rounded-xl font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 transition">
+              Portal Bursa Kerja (BKK)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER (MATCHING FIGMA BOTTOM BAR)                                        -->
+  <!-- ========================================================================= -->
+  <footer class="bg-slate-900 text-slate-400 text-xs pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: School Identity (2 Cols span) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-extrabold text-lg">
+              SMK
+            </div>
+            <div>
+              <span class="text-lg font-bold text-white tracking-tight">SMK BISA HEBAT</span>
+              <p class="text-[11px] text-slate-400">Pusat Keunggulan & Kemitraan Industri Global</p>
+            </div>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Mencetak insan vokasi berakhlak mulia, kompeten, berdaya saing global, dan siap memimpin transformasi dunia industri dengan penguasaan teknologi terdepan.
+          </p>
+          <div class="flex items-center space-x-3 text-slate-400">
+            <span class="inline-flex items-center px-2.5 py-1 rounded bg-slate-800 text-blue-400 text-[11px] font-semibold">
+              Terakreditasi A (Unggul)
+            </span>
+            <span class="inline-flex items-center px-2.5 py-1 rounded bg-slate-800 text-amber-400 text-[11px] font-semibold">
+              SMK Pusat Keunggulan (PK)
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Program Keahlian -->
+        <div class="space-y-3">
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider">Program Keahlian</h5>
+          <ul class="space-y-2">
+            <li><a href="#rpl" class="hover:text-blue-400 transition">Rekayasa Perangkat Lunak</a></li>
+            <li><a href="#katalog" class="hover:text-blue-400 transition">Desain Komunikasi Visual</a></li>
+            <li><a href="#katalog" class="hover:text-blue-400 transition">Teknik Kendaraan Ringan</a></li>
+            <li><a href="#katalog" class="hover:text-blue-400 transition">Teknik Komputer & Jaringan</a></li>
+            <li><a href="#katalog" class="hover:text-blue-400 transition">Akuntansi & Keuangan</a></li>
+            <li><a href="#katalog" class="hover:text-blue-400 transition">Kuliner & Tata Boga</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Kemitraan & Karir -->
+        <div class="space-y-3">
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider">Kemitraan & Karir</h5>
+          <ul class="space-y-2">
+            <li><a href="#kemitraan" class="hover:text-blue-400 transition">Mitra DUDI Multisektor</a></li>
+            <li><a href="#tefa" class="hover:text-blue-400 transition">Teaching Factory (TeFa)</a></li>
+            <li><a href="#galeri" class="hover:text-blue-400 transition">Galeri Karya & Produk</a></li>
+            <li><a href="#kemitraan" class="hover:text-blue-400 transition">Bursa Kerja Khusus (BKK)</a></li>
+            <li><a href="#rpl" class="hover:text-blue-400 transition">Sertifikasi BNSP & AWS</a></li>
+            <li><button data-modal-target="modal-kemitraan" class="hover:text-blue-400 transition text-left">Ajukan Kerjasama PKL</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontak & Layanan -->
+        <div class="space-y-3">
+          <h5 class="text-sm font-bold text-white uppercase tracking-wider">Kontak & Kampus</h5>
+          <div class="space-y-2 text-xs leading-relaxed text-slate-400">
+            <p><span class="text-white font-semibold">Alamat:</span> Jl. Pendidikan Vokasi No. 108, Kawasan Pendidikan Modern, Indonesia</p>
+            <p><span class="text-white font-semibold">Telp:</span> (021) 8899-7722 / (021) 8899-7733</p>
+            <p><span class="text-white font-semibold">WhatsApp PPDB:</span> +62 812-3456-7890</p>
+            <p><span class="text-white font-semibold">Email:</span> info@smkvokasi.sch.id</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 SMK Vokasi Unggulan. All rights reserved. Sesuai Standar Kurikulum Merdeka & DUDI.</p>
+        <div class="flex items-center space-x-6">
+          <a href="#beranda" class="hover:text-slate-300">Kebijakan Privasi</a>
+          <a href="#beranda" class="hover:text-slate-300">Syarat & Ketentuan</a>
+          <a href="#beranda" class="hover:text-slate-300">Peta Situs</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE MODALS                                                        -->
+  <!-- ========================================================================= -->
+  
+  <!-- Modal PPDB -->
+  <div id="modal-ppdb" class="modal-container hidden fixed inset-0 z-50 items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm modal-backdrop">
+    <div class="modal-card bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold text-amber-600 uppercase">Tahun Ajaran 2026/2027</span>
+          <h3 class="text-xl font-bold text-slate-900">Pendaftaran Siswa Baru (PPDB)</h3>
+        </div>
+        <button data-modal-close class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+      <form class="space-y-4 mt-4" onsubmit="event.preventDefault(); alert('Terima kasih! Formulir pendaftaran awal telah terkirim. Tim PPDB kami akan menghubungi melalui WhatsApp.');">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap Siswa</label>
+          <input type="text" required placeholder="Contoh: Muhammad Bintang" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp (Aktif)</label>
+          <input type="tel" required placeholder="081234567890" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Pilihan Jurusan Utama</label>
+          <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+            <option value="">-- Pilih Jurusan --</option>
+            <option value="RPL">Rekayasa Perangkat Lunak (RPL)</option>
+            <option value="DKV">Desain Komunikasi Visual (DKV)</option>
+            <option value="TKR">Teknik Kendaraan Ringan (TKR)</option>
+            <option value="TJKT">Teknik Komputer & Jaringan (TJKT)</option>
+            <option value="AKL">Akuntansi & Keuangan Lembaga (AKL)</option>
+            <option value="Kuliner">Kuliner & Tata Boga</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Asal Sekolah (SMP/MTs)</label>
+          <input type="text" required placeholder="SMP Negeri 1..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm shadow-md shadow-amber-600/30 transition">
+            Kirim Formulir Pendaftaran PPDB
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Konsultasi Minat & Bakat -->
+  <div id="modal-konsultasi" class="modal-container hidden fixed inset-0 z-50 items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm modal-backdrop">
+    <div class="modal-card bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold text-blue-600 uppercase">Layanan Gratis</span>
+          <h3 class="text-xl font-bold text-slate-900">Konsultasi Minat & Bakat</h3>
+        </div>
+        <button data-modal-close class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+      <div class="mt-4 space-y-4">
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Konsultasikan pilihan jurusan anak Anda dengan psikolog dan konselor karir kami secara gratis melalui WhatsApp.
+        </p>
+        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 space-y-2 text-xs text-blue-900">
+          <div class="flex items-center space-x-2 font-bold">
+            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>Tes Minat Bakat Online (Gratis)</span>
+          </div>
+          <div class="flex items-center space-x-2 font-bold">
+            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>Analisis Prospek Gaji & Karir 5 Tahun</span>
+          </div>
+          <div class="flex items-center space-x-2 font-bold">
+            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>Info Skema Beasiswa Prestasi & KIP</span>
+          </div>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20SMK%20Unggulan,%20saya%20ingin%20konsultasi%20minat%20bakat%20jurusan." target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition">
+          Mulai Chat WhatsApp Konselor
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Kemitraan DUDI -->
+  <div id="modal-kemitraan" class="modal-container hidden fixed inset-0 z-50 items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm modal-backdrop">
+    <div class="modal-card bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold text-blue-600 uppercase">Kerjasama Perusahaan</span>
+          <h3 class="text-xl font-bold text-slate-900">Pengajuan Kemitraan DUDI</h3>
+        </div>
+        <button data-modal-close class="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+      <form class="space-y-4 mt-4" onsubmit="event.preventDefault(); alert('Terima kasih! Pengajuan kemitraan perusahaan Anda telah kami terima. Tim Hubungan Industri (Hubin) akan segera merespons proposal.');">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Perusahaan / Korporasi</label>
+          <input type="text" required placeholder="PT Contoh Teknologi Indonesia" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Kontak Person (PIC / HRD)</label>
+          <input type="text" required placeholder="Bpk / Ibu..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Email Resmi Perusahaan</label>
+          <input type="email" required placeholder="hr@perusahaan.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Bentuk Kemitraan yang Diajukan</label>
+          <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+            <option value="magang">Penerimaan Magang / Prakerin (PKL)</option>
+            <option value="rekrutmen">Direct Hiring / Rekrutmen Lulusan</option>
+            <option value="tefa">Project Pesanan Teaching Factory (TeFa)</option>
+            <option value="kurikulum">Penyelarasan Kurikulum / Guru Tamu</option>
+          </select>
+        </div>
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md transition">
+            Kirim Pengajuan Kemitraan DUDI
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Portal Siswa -->
+  <div id="modal-portal" class="modal-container hidden fixed inset-0 z-50 items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm modal-backdrop">
+    <div class="modal-card bg-white rounded-3xl max-w-sm w-full p-6 sm:p-8 shadow-2xl border border-slate-200 text-center">
+      <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-4 font-black text-2xl">
+        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" /></svg>
+      </div>
+      <h3 class="text-xl font-bold text-slate-900">Portal Akademik Siswa</h3>
+      <p class="text-xs text-slate-500 mt-1 mb-6">Akses jadwal KBM, nilai semester, presensi, dan e-learning siswa terpadu.</p>
+      <form class="space-y-3" onsubmit="event.preventDefault(); alert('Sesi simulasi portal akademik. Silakan gunakan NIS dan password resmi sekolah.');">
+        <input type="text" placeholder="NIS / Email Siswa" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="password" placeholder="Password" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow transition">
+          Masuk ke Portal
+        </button>
+      </form>
+      <button data-modal-close class="mt-4 text-xs text-slate-400 hover:text-slate-600">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Embedded JavaScript (Self-Contained Single File) -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initScrollSpy();
+      initKatalogFilter();
+      initGaleriFilter();
+      initMitraFilter();
+      initAccordion();
+      initModals();
+      initMobileMenu();
+    });
+
+    // ScrollSpy: Highlights active nav item while scrolling
+    function initScrollSpy() {
+      const sections = document.querySelectorAll('section[id], main[id], div[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      const onScroll = () => {
+        let scrollPos = window.scrollY + 120;
+
+        sections.forEach(sec => {
+          const id = sec.getAttribute('id');
+          if (!id) return;
+          const top = sec.offsetTop;
+          const height = sec.offsetHeight;
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active-nav', 'text-blue-600');
+                link.classList.remove('text-slate-600');
+              } else {
+                link.classList.remove('active-nav', 'text-blue-600');
+                link.classList.add('text-slate-600');
+              }
+            });
+          }
+        });
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // Katalog Jurusan Search & Category Filter
+    function initKatalogFilter() {
+      const searchInput = document.getElementById('katalog-search');
+      const filterPills = document.querySelectorAll('.katalog-pill');
+      const cards = document.querySelectorAll('.jurusan-card-item');
+
+      let currentCategory = 'all';
+      let searchQuery = '';
+
+      const applyFilters = () => {
+        cards.forEach(card => {
+          const category = card.dataset.category || '';
+          const text = (card.innerText || '').toLowerCase();
+
+          const matchesCat = currentCategory === 'all' || category === currentCategory;
+          const matchesSearch = !searchQuery || text.includes(searchQuery);
+
+          if (matchesCat && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      };
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          applyFilters();
+        });
+      }
+
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          filterPills.forEach(p => {
+            p.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+            p.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+          });
+
+          pill.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+          pill.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+
+          currentCategory = pill.dataset.category || 'all';
+          applyFilters();
+        });
+      });
+    }
+
+    // Galeri Karya Category Filter
+    function initGaleriFilter() {
+      const filterBtns = document.querySelectorAll('.galeri-filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-card-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.dataset.category;
+
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+            b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+          });
+
+          btn.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+          btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+
+          galleryItems.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    // Mitra DUDI Sector Filter
+    function initMitraFilter() {
+      const sectorBtns = document.querySelectorAll('.mitra-filter-btn');
+      const partnerCards = document.querySelectorAll('.mitra-card-item');
+
+      sectorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const sector = btn.dataset.sector;
+
+          sectorBtns.forEach(b => {
+            b.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+            b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+          });
+
+          btn.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+
+          partnerCards.forEach(card => {
+            if (sector === 'all' || card.dataset.sector === sector) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    // FAQ Accordion
+    function initAccordion() {
+      const accordionHeaders = document.querySelectorAll('.faq-header');
+
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          const body = header.nextElementSibling;
+          const icon = header.querySelector('.faq-icon');
+          const isClosed = body.classList.contains('hidden');
+
+          const parentContainer = header.closest('.faq-container') || document;
+          parentContainer.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+          parentContainer.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+          if (isClosed) {
+            body.classList.remove('hidden');
+            if (icon) icon.classList.add('rotate-180');
+          }
+        });
+      });
+    }
+
+    // Interactive Modals (PPDB, Konsultasi, Kemitraan, Portal)
+    function initModals() {
+      const modalTriggers = document.querySelectorAll('[data-modal-target]');
+      const modalCloses = document.querySelectorAll('[data-modal-close]');
+
+      modalTriggers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = btn.dataset.modalTarget;
+          const modal = document.getElementById(targetId);
+          if (modal) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      const closeModal = (modal) => {
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      };
+
+      modalCloses.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const modal = btn.closest('.modal-container');
+          closeModal(modal);
+        });
+      });
+
+      document.querySelectorAll('.modal-container').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal-container:not(.hidden)').forEach(modal => {
+            closeModal(modal);
+          });
+        }
+      });
+    }
+
+    // Mobile Hamburger Menu
+    function initMobileMenu() {
+      const toggleBtn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-nav-menu');
+
+      if (toggleBtn && menu) {
+        toggleBtn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+          });
+        });
+      }
+    }
+  </script>
+</body>
+</html>
